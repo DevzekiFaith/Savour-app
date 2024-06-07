@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 interface Product {
@@ -18,11 +18,14 @@ const SingleRecipePage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
+  const router = useRouter();
+  const { id } = router.query;
 
   useEffect(() => {
+    if (!id) return;
 
-    const fetchData = async () => {
-      const url = `https://your-api-endpoint.com/recipes/${id}`;
+    const fetchData = async (recipeId: string | string[]) => {
+      const url = `https://the-mexican-food-db.p.rapidapi.com/recipe/${recipeId}`;
       const options = {
         method: "GET",
         headers: {
@@ -45,8 +48,8 @@ const SingleRecipePage: React.FC = () => {
       }
     };
 
-    fetchData();
-  }, []);
+    fetchData(id);
+  }, [id]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -61,7 +64,7 @@ const SingleRecipePage: React.FC = () => {
   }
 
   return (
-    <div className="pt-[6rem] bg-[#f3ecf0] max-h-screen">
+    <div className="pt-[6rem] bg-[#f3ecf0] min-h-screen">
       <h1 className="uppercase font-extrabold text-[3rem] text-slate-900 ml-[2.2rem]">
         Food Recipe Detail
       </h1>
@@ -79,6 +82,8 @@ const SingleRecipePage: React.FC = () => {
           <div>
             <h2 className="font-bold mt-2">Title: {data.Title}</h2>
             <h5 className="mt-2">Difficulty: {data.difficulty}</h5>
+            <h5 className="mt-2">Ingredients: {data.Ingredients}</h5>
+            <h5 className="mt-2">Instructions: {data.Instruction}</h5>
           </div>
         </div>
       </div>
