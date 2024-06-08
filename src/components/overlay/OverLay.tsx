@@ -30,7 +30,7 @@ const OverLay: React.FC = () => {
                 ab! Dignissimos, voluptate aut.
               </p>
 
-              <button className="border-2 p-3 font-bold uppercase text-slate-300 mt-2">
+              <button className="border-2 p-3 font-bold bg-green-800 uppercase text-slate-300 mt-2">
                 Recipe Schedule
               </button>
             </div>

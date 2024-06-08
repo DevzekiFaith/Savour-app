@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
           <h4 className="text-center text-[1rem] uppercase font-extrabold text-white">
             Welcome!
           </h4>
-          <div className="w-[400px] shadow-2xl p-3">
+          <div className="w-[500px] shadow-2xl p-3 ">
             <span className="flex flex-col">
               <label className=" text-sm mt-2">Name</label>
               <input

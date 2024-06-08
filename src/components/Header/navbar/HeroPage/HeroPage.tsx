@@ -24,7 +24,7 @@ const HeroPage: FC = () => {
           </p>
 
           <Link href="/food">
-            <button className=" text-white bg-[#F1916D] border-1 shadow-2xl shadow-slate-20  p-[.4rem] w-[18rem] mt-[1rem] font-extrabold hover:scale-95">
+            <button className=" text-white bg-green-800 border-1 shadow-2xl shadow-slate-20  p-[.4rem] w-[18rem] mt-[1rem] font-extrabold hover:scale-95">
               See More
             </button>
           </Link>
