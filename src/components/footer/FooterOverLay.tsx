@@ -7,7 +7,7 @@ const FooterOverLay = () => {
   return (
     <div className="absolute top-4 w-full">
       <div className="">
-        <div className="p-10 bg-gray-900 flex xl:flex-row flex-col justify-between items-center relative ">
+        <div className="p-10 bg-gray-900 flex xl:flex-row flex-col justify-between items-center relative gap-[1rem]">
           <Link href="/">
             <div className={styles.Logo}>
               <Image

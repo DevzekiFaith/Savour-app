@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
         </div>
         <div className="mt-[12rem]">
           <div>
-            <h1 className="bg-orange-300  text-white w-[8rem] p-1 pl-3 shadow-2xl">
+            <h1 className="bg-green-900 font-Raleways_Dot  text-white w-[8rem] p-1 pl-3 shadow-2xl font-bold">
               Contact us
             </h1>
           </div>
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
               <textarea className=" h-[6rem] mt-2" placeholder="  Leave an information...." id=""/>
             </span>
 
-            <button className="bg-green-900 w-full h-[3rem] mt-[2rem] font-extrabold uppercase">
+            <button className="bg-green-900 w-full h-[3rem] mt-[2rem] font-extrabold uppercase text-white">
               send
             </button>
           </div>
