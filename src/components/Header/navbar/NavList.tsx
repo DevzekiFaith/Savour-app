@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaAlignJustify } from "react-icons/fa6";
 
 // CLARIFY THE DATA TYPE FIRSTLY
 
@@ -26,7 +27,7 @@ const NavList: React.FC = () => {
   const isActive = (path: string): boolean => path === pathname;
 
   return (
-    <div className=" flex justify-between gap-4 left-[3.8rem] items-center w-full mt-[1rem] fixed z-[40] pb-4">
+    <div className=" flex justify-between gap-4 xl:left-[3.8rem] items-center w-full mt-[1rem] fixed z-[40] pb-4">
       <div className="flex justify-center items-center gap-4">
         <div className="w-[3rem] h-[3rem]">
           <Link href="/">
@@ -42,7 +43,7 @@ const NavList: React.FC = () => {
 
         {/* // MAP THIRDLY */}
 
-        <div className="flex justify-center items-center bg-transparent gap-4 text-extrabold w-full text-[#DFB6B2]">
+        <div className=" flex justify-center items-center bg-transparent xl:gap-4 text-extrabold w-full text-[#DFB6B2]">
           {navLinks.map((link) => (
             <Link
               href={link.path}
@@ -54,6 +55,9 @@ const NavList: React.FC = () => {
           ))}
         </div>
       </div>
+        <div className="cursor-pointer">
+          <FaAlignJustify className=" w-[1.8rem] h-[2rem] xl:hidden block text-white mr-[1rem]" />
+        </div>
     </div>
   );
 };

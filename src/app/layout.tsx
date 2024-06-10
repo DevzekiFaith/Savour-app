@@ -1,13 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import {Poppins, Raleway_Dots} from "next/font/google"
 import "./globals.css";
 import Footer from "@/components/footer/Footer";
 import NavList from "@/components/Header/navbar/NavList";
 
 
-const inter = Inter({
+
+const Poppin = Poppins({
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "800"],
+  variable: "--font-Poppins",
 });
+
+const Raleways = Raleway_Dots({
+  subsets: ["latin"],
+  weight:  "400",
+  variable: "--font-Raleway_Dots",
+});
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,8 +33,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="flex flex-col justify-between">
+      <body className={`${Poppin.variable}, ${Raleways.variable}`}>
+        <div className="">
           <NavList />
           {children}
           <Footer />

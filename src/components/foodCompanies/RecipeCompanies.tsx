@@ -27,18 +27,19 @@ type props = {
 
 const RecipeCompanies = () => {
   return (
-    <div className="relative group h-[7rem] mb-[10rem]">
-      <section className="mt-[5rem] ">
-        <div className="relative">
-          <div className="absolute left-[3rem] flex justify-between items-center">
-            <hr className="bg-slate-900  h-[2px] w-[6rem] ml-[24rem] mt-4" />
+    <div className="relative group xl:h-[7rem] xl:mb-[10rem]">
+      <section className="xl:mt-[5rem] ">
+        <div className="relative xl:mt-0">
+          <div className="absolute left-[3rem] flex justify-between items-center xl:mb-0 ">
+            <hr className="bg-slate-900  h-[2px] xl:w-[6rem] w-[4rem] xl:ml-[24rem] ml-[1rem] mt-4" />
             <h1 className="font-bold text-[1.5rem]">Client Companies</h1>
-            <hr className="bg-slate-900 h-[2px] w-[6rem] mt-4" />
+            <hr className="bg-slate-900 h-[2px] xl:w-[6rem] w-[4rem] mt-4"/>
           </div>
-          <div className="flex justify-center gap-2 items-center p-[1rem] bg-[#EDEAE0] h-[19rem]">
+          <div className="flex xl:flex-row flex-col justify-center gap-2 items-center p-[1rem] bg-[#EDEAE0] xl:h-[19rem] xl:mt-0">
             {slide.map((slide, idx) => (
-              <div key={idx}>
-                <Image className="shadow-2xl"
+              <div className="" key={idx}>
+                <Image
+                  className="shadow-2xl xl:mt-0 w-[100%]"
                   src={slide.src}
                   alt="Slide Images"
                   width={300}

@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import FooterOverLay from "./FooterOverLay";
+import styles from "@/Component/footer/footer.module.scss";
 
 const Footer: React.FC = () => {
   return (
-    <div className="flex-1">
+    <div className="">
       <section className="mt-[2rem] relative">
         <div className="">
           <Image
-            className="w-full h-[250px] bg-opacity-45"
+            className="w-full xl:h-[250px] bg-opacity-45"
             src="/ft1.png"
             alt="Footer Image"
             width={300}

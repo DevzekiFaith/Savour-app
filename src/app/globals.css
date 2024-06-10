@@ -9,6 +9,10 @@
     border-radius: 12px;
     }
 
+    /* body{
+      height: 2200px;
+    } */
+
   @layer base {
     :root {
       --background: 0 0% 100%;

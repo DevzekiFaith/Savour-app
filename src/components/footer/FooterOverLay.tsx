@@ -6,8 +6,8 @@ import styles from "@/components/footer/footer.module.scss";
 const FooterOverLay = () => {
   return (
     <div className="absolute top-4 w-full">
-      <div className=" ">
-        <div className="p-10 bg-gray-900 flex xl:flex-row justify-between items-center relative ">
+      <div className="">
+        <div className="p-10 bg-gray-900 flex xl:flex-row flex-col justify-between items-center relative ">
           <Link href="/">
             <div className={styles.Logo}>
               <Image
@@ -17,7 +17,9 @@ const FooterOverLay = () => {
                 width={30}
                 height={30}
               />
-              <p className="w-[80px] pt-[.5rem] text-green-800">Savour Food Recipe Lite</p>
+              <p className="w-[80px] pt-[.5rem] text-green-800">
+                Savour Food Recipe Lite
+              </p>
             </div>
           </Link>
           <div className="footer">

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import OverLay from "../overlay/OverLay";
+import OverLay from "./overlay/OverLay";
 
 const Hero2: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const Hero2: React.FC = () => {
       <section className="">
         <div className="w-full h-[600px] relative ">
           <Image
-            className="w-full h-[680px]"
+            className="xl:w-full xl:h-[680px]"
             src="/hero-image2.jpg"
             width={300}
             height={400}

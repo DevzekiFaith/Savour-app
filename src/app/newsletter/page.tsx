@@ -65,9 +65,9 @@ const NewsLetter: React.FC = () => {
         <h1 className="uppercase font-extrabold text-[4rem] ml-[3rem]">
           Newsletter Section
         </h1>
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid xl:grid-cols-4 gap-2">
           {data.map((item) => (
-            <div key={item.id} className="p-3 w-[20rem] border border-white bg-gray-100 shadow-2xl cursor-pointer mb-4 object-contain overflow-hidden">
+            <div key={item.id} className="p-3 w-[24rem] border border-white bg-gray-100 shadow-2xl cursor-pointer mb-4 object-contain overflow-hidden xl:ml-0 ml-[3.5rem]">
               {item.thumbnail_url && (
                 <Image
                   className="w-[100%] shadow-2xl shadow-slate-900 h-[20rem]"

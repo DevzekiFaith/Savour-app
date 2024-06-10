@@ -6,8 +6,8 @@ import RecipeCompanies from "@/components/foodCompanies/RecipeCompanies";
 
 const Home: React.FC = () => {
   return (
-    <main>
-      <section className="relative">
+    <main className="relative">
+      <section className="">
         <div>
           <NavList />
         </div>
@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         </div>
         <div className="flex justify-center items-center">
           <Image
-            className="w-full h-[800px]"
+            className="xl:w-full w-full xl:h-[700px]"
             src="/p6.jpg"
             width={300}
             height={300}
