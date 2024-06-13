@@ -78,14 +78,14 @@ const NavList: React.FC = () => {
               <FaAlignJustify className="absolute top-6 right-4 text-white xl:hidden w-[2rem] h-[2rem]" />
             </div>
           ) : (
-            <div className="absolute  top-[4rem] right-[4rem]  w-[10rem] h-[16rem] p-[1rem] ">
+            <div className="absolute  top-[4rem] right-[4rem]  w-[12rem] h-[16rem] p-[1rem] z-[100] ">
               <div
                 className="absolute top-6 right-[-3.5rem]"
                 onClick={closeToggle}
               >
                 <FaRegTimesCircle className="text-white w-[2rem] h-[2rem] top-6 right-4" />
               </div>
-              <div className="text-white flex flex-col justify-center items-center gap-[2rem] bg-orange-500 mt-[-3rem] z-20">
+              <div className="text-white flex flex-col justify-center items-center gap-[2rem] bg-slate-900 mt-[-3rem] z-20">
                 {navLinks.map((link) => (
                   <Link
                     href={link.path}
