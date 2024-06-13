@@ -16,8 +16,14 @@ const Contact: React.FC = () => {
             height={300}
           />
         </div>
-        <div className="w-[300px] absolute left-[8rem] top-[38.8rem] h-[14rem]">
-          <Image className="block w-[100%]" src="/3d-woman.png" alt="contact-Image" width={300} height={300} />
+        <div className="w-[300px] absolute left-[8rem] top-[38.8rem] h-[14rem] xl:hidden block">
+          <Image
+            className="block w-[100%]"
+            src="/3d-woman.png"
+            alt="contact-Image"
+            width={300}
+            height={300}
+          />
         </div>
         <div className="mt-[12rem]">
           <div>
@@ -28,7 +34,7 @@ const Contact: React.FC = () => {
           <h4 className="text-center text-[1rem] uppercase font-extrabold text-white">
             Welcome!
           </h4>
-          <div className="w-[500px] shadow-2xl p-3 mt-[10rem] ">
+          <div className="w-[500px] shadow-2xl p-3 xl:mt-0 mt-[10rem] ">
             <span className="flex flex-col">
               <label className=" text-sm mt-2">Name</label>
               <input
@@ -58,7 +64,11 @@ const Contact: React.FC = () => {
             </span>
             <span className="flex flex-col">
               <label className="mt-2 text-sm">Message</label>
-              <textarea className=" h-[6rem] mt-2" placeholder="  Leave an information...." id=""/>
+              <textarea
+                className=" h-[6rem] mt-2"
+                placeholder="  Leave an information...."
+                id=""
+              />
             </span>
 
             <button className="bg-green-900 w-full h-[3rem] mt-[2rem] font-extrabold uppercase text-white">

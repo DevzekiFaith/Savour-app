@@ -74,7 +74,7 @@ const FooterOverLay = () => {
                   <input
                     type="text"
                     placeholder="username@site.com"
-                    className="input input-bordered join-item mb-[1rem] h-[2.8rem]"
+                    className="input input-bordered join-item mb-[1rem] h-[2.8rem] w-[13.5rem]"
                   />
                   <button className=" bg-green-500 p-3 font-extrabold">
                     Subscribe
