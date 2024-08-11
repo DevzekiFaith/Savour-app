@@ -9,7 +9,7 @@ interface Product {
   Ingredients: string;
   Instruction: string;
   Title: string;
-  Image: string; // Assuming Image URL is included in the Product type
+  Image: string; 
   description: string;
   thumbnail_url: any;
   keywords:string;
@@ -39,7 +39,7 @@ const NewsLetter: React.FC = () => {
       }
       const result = await response.json();
       setData(result.results);
-      localStorage.setItem("Product", JSON.stringify(result)) // Assuming the API returns a results array
+      localStorage.setItem("Product", JSON.stringify(result)) 
     } catch (error: any) {
       setError(error.message);
     } finally {

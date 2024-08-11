@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaCaretRight } from "react-icons/fa6";
 import { FaCaretLeft } from "react-icons/fa6";
-import { useState } from "react";
 
 type slide = {
   id: number;
@@ -26,6 +25,16 @@ type props = {
 };
 
 const RecipeCompanies = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // or a loading spinner, etc.
+  }
+
   return (
     <div className="relative group xl:h-[7rem] xl:mb-[10rem]">
       <section className="xl:mt-[5rem] ">
@@ -33,7 +42,7 @@ const RecipeCompanies = () => {
           <div className="absolute left-[3rem] flex justify-between items-center xl:mb-0 ">
             <hr className="bg-slate-900  h-[2px] xl:w-[6rem] w-[4rem] xl:ml-[24rem] ml-[1rem] mt-4" />
             <h1 className="font-bold text-[1.5rem]">Client Companies</h1>
-            <hr className="bg-slate-900 h-[2px] xl:w-[6rem] w-[4rem] mt-4"/>
+            <hr className="bg-slate-900 h-[2px] xl:w-[6rem] w-[4rem] mt-4" />
           </div>
           <div className="flex xl:flex-row flex-col justify-center gap-2 items-center p-[1rem] bg-[#EDEAE0] xl:h-[19rem] xl:mt-0">
             {slide.map((slide, idx) => (
@@ -51,12 +60,12 @@ const RecipeCompanies = () => {
         </div>
       </section>
       <div className="absolute top-[8rem] right-3 hidden group-hover:block hover:bg-slate-50 cursor-pointer">
-        <button className="text-[3rem]">
+        <button type="button" className="text-[3rem]" title="Next">
           <FaCaretRight />
         </button>
       </div>
       <div className="absolute top-[8rem] left-0 hidden group-hover:block cursor-pointer hover:bg-slate-50">
-        <button className="text-[3rem]">
+        <button type="button" className="text-[3rem]" title="Previous">
           <FaCaretLeft />
         </button>
       </div>
